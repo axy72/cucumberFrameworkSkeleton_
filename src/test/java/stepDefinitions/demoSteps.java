@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import config.configProperties;
 import factoryRepository.demoPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,8 @@ public class demoSteps {
     @Given("open chrome browser")
     public void open_chrome_browser() {
 
-        System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chrome/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chrome/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ configProperties.CHDriverPath);
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
