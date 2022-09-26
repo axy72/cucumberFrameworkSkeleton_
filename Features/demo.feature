@@ -13,4 +13,4 @@ Feature: Demo Feature file
     Examples:
       |username |password|
       |usr1     |pass1   |
-      |usr2     |pass2   |
+      #|usr2     |pass2   |
